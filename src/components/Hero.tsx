@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ShoppingBag } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -62,7 +64,7 @@ const Hero = () => {
             Distribuidora autorizada de cosméticos profissionais. Excelência em terapia capilar e estética com produtos que transformam.
           </motion.h2>
           <motion.div
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row flex-wrap gap-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
@@ -77,6 +79,16 @@ const Hero = () => {
             >
               Entre em contato
             </motion.a>
+            <Link to="/vitrine">
+              <motion.div
+                className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground hover:bg-brown-light transition-colors duration-300 px-8 py-4 rounded-md font-semibold text-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <ShoppingBag className="w-5 h-5" />
+                Ver Vitrine
+              </motion.div>
+            </Link>
             <motion.a
               href="#sobre"
               className="inline-flex items-center justify-center border-2 border-beige text-beige hover:bg-beige hover:text-brown transition-colors duration-300 px-8 py-4 rounded-md font-semibold text-lg"
