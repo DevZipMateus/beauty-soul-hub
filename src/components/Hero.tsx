@@ -45,10 +45,10 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-custom px-4 md:px-8 pt-20">
-        <div className="max-w-2xl">
+      <div className="relative z-10 container-custom px-4 sm:px-6 md:px-8 pt-20 sm:pt-24">
+        <div className="max-w-3xl">
           <motion.h1
-            className="font-display text-5xl md:text-7xl font-bold text-beige-light mb-6"
+            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-beige-light mb-4 sm:mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -56,7 +56,7 @@ const Hero = () => {
             Beauty Sul Cosméticos
           </motion.h1>
           <motion.h2
-            className="text-xl md:text-2xl text-beige/90 mb-8 leading-relaxed"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-beige/90 mb-6 sm:mb-8 leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -64,7 +64,7 @@ const Hero = () => {
             Distribuidora autorizada de cosméticos profissionais. Excelência em terapia capilar e estética com produtos que transformam.
           </motion.h2>
           <motion.div
-            className="flex flex-col sm:flex-row flex-wrap gap-4"
+            className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
@@ -73,7 +73,7 @@ const Hero = () => {
               href="https://wa.me/5551981636522"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-primary text-primary-foreground hover:bg-gold-dark transition-colors duration-300 px-8 py-4 rounded-md font-semibold text-lg"
+              className="inline-flex items-center justify-center bg-primary text-primary-foreground hover:bg-gold-dark transition-colors duration-300 px-5 sm:px-6 md:px-8 py-3 sm:py-4 rounded-md font-semibold text-sm sm:text-base md:text-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -81,17 +81,17 @@ const Hero = () => {
             </motion.a>
             <Link to="/vitrine">
               <motion.div
-                className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground hover:bg-brown-light transition-colors duration-300 px-8 py-4 rounded-md font-semibold text-lg"
+                className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground hover:bg-brown-light transition-colors duration-300 px-5 sm:px-6 md:px-8 py-3 sm:py-4 rounded-md font-semibold text-sm sm:text-base md:text-lg w-full sm:w-auto"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <ShoppingBag className="w-5 h-5" />
+                <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5" />
                 Ver Vitrine
               </motion.div>
             </Link>
             <motion.a
               href="#sobre"
-              className="inline-flex items-center justify-center border-2 border-beige text-beige hover:bg-beige hover:text-brown transition-colors duration-300 px-8 py-4 rounded-md font-semibold text-lg"
+              className="inline-flex items-center justify-center border-2 border-beige text-beige hover:bg-beige hover:text-brown transition-colors duration-300 px-5 sm:px-6 md:px-8 py-3 sm:py-4 rounded-md font-semibold text-sm sm:text-base md:text-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -101,24 +101,24 @@ const Hero = () => {
 
           {/* Brands */}
           <motion.div
-            className="mt-12"
+            className="mt-8 sm:mt-10 md:mt-12"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            <p className="text-beige/70 text-sm uppercase tracking-widest mb-4">
+            <p className="text-beige/70 text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4">
               Distribuidora autorizada
             </p>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 sm:gap-6">
               <motion.span
-                className="text-beige-light font-display text-2xl tracking-wide"
+                className="text-beige-light font-display text-xl sm:text-2xl tracking-wide"
                 whileHover={{ scale: 1.1, color: "hsl(42, 75%, 50%)" }}
               >
                 Salvatore
               </motion.span>
               <span className="text-beige/50">|</span>
               <motion.span
-                className="text-beige-light font-display text-2xl tracking-wide"
+                className="text-beige-light font-display text-xl sm:text-2xl tracking-wide"
                 whileHover={{ scale: 1.1, color: "hsl(42, 75%, 50%)" }}
               >
                 Toctus
