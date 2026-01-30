@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="flex justify-center md:justify-start">
             <motion.img
               src={logo}
-              alt="Beauty Soul Cosméticos"
+              alt="Beauty Sul Cosméticos"
               className="h-16 w-auto brightness-0 invert"
               whileHover={{ scale: 1.05 }}
             />
@@ -84,7 +84,7 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <p className="text-background/60 text-sm">
-            © {currentYear} Beauty Soul Cosméticos. Todos os direitos reservados.
+            © {currentYear} Beauty Sul Cosméticos. Todos os direitos reservados.
           </p>
         </motion.div>
       </div>

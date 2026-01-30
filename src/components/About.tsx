@@ -70,7 +70,7 @@ const About = () => {
           >
             <div className="bg-card/95 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg">
               <p className="text-lg md:text-xl text-foreground/80 leading-relaxed mb-6">
-                A Beauty Soul Cosméticos surgiu em <strong className="text-primary">26 de setembro de 2011</strong>, 
+                A Beauty Sul Cosméticos surgiu em <strong className="text-primary">26 de setembro de 2011</strong>, 
                 quando descobrimos um alinhamento natural com o mercado de beleza profissional. 
                 Ali vimos uma oportunidade de negócios, levando aos profissionais produtos capazes de 
                 transformar vidas de forma segura.
