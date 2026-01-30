@@ -1,0 +1,128 @@
+import { Phone, Mail, MapPin, Clock, Instagram } from "lucide-react";
+
+const contactInfo = [
+  {
+    icon: Phone,
+    label: "Telefone",
+    value: "(51) 98163-6522",
+    href: "https://wa.me/5551981636522",
+  },
+  {
+    icon: Mail,
+    label: "E-mail",
+    value: "beautysulcosmeticos@gmail.com",
+    href: "mailto:beautysulcosmeticos@gmail.com",
+  },
+  {
+    icon: MapPin,
+    label: "Endereço",
+    value: "Av. Pedro Adans Filho, 1892, Industrial, Novo Hamburgo - RS",
+    href: null,
+  },
+  {
+    icon: Clock,
+    label: "Horário de funcionamento",
+    value: "Segunda a sexta: 8h às 12h | 13h às 17h",
+    href: null,
+  },
+];
+
+const Contact = () => {
+  return (
+    <section id="contato" className="section-padding bg-accent">
+      <div className="container-custom">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-accent-foreground mb-4">
+            Entre em contato
+          </h2>
+          <div className="w-24 h-1 bg-gold mx-auto rounded-full mb-6" />
+          <p className="text-lg text-accent-foreground/80 max-w-2xl mx-auto">
+            Estamos prontos para atender você e esclarecer todas as suas dúvidas sobre nossos 
+            produtos e serviços.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Contact Info */}
+          <div className="space-y-6">
+            {contactInfo.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-4 bg-brown-light/30 rounded-xl p-6 backdrop-blur-sm"
+              >
+                <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <item.icon className="w-6 h-6 text-gold" />
+                </div>
+                <div>
+                  <p className="text-accent-foreground/60 text-sm uppercase tracking-wide mb-1">
+                    {item.label}
+                  </p>
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      target={item.href.startsWith("http") ? "_blank" : undefined}
+                      rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className="text-accent-foreground font-medium hover:text-gold transition-colors"
+                    >
+                      {item.value}
+                    </a>
+                  ) : (
+                    <p className="text-accent-foreground font-medium">{item.value}</p>
+                  )}
+                </div>
+              </div>
+            ))}
+
+            {/* Social Media */}
+            <div className="flex items-start gap-4 bg-brown-light/30 rounded-xl p-6 backdrop-blur-sm">
+              <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <Instagram className="w-6 h-6 text-gold" />
+              </div>
+              <div>
+                <p className="text-accent-foreground/60 text-sm uppercase tracking-wide mb-1">
+                  Instagram
+                </p>
+                <a
+                  href="https://www.instagram.com/beauty_sul"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent-foreground font-medium hover:text-gold transition-colors"
+                >
+                  @beauty_sul
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Card */}
+          <div className="bg-background rounded-2xl p-8 md:p-10 shadow-2xl">
+            <h3 className="font-display text-3xl font-bold text-foreground mb-4">
+              Fale conosco pelo WhatsApp
+            </h3>
+            <p className="text-foreground/70 mb-8 leading-relaxed">
+              Tire suas dúvidas, solicite orçamentos ou conheça mais sobre nossos produtos. 
+              Nossa equipe está pronta para atendê-lo de forma rápida e personalizada.
+            </p>
+            <a
+              href="https://wa.me/5551981636522"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center w-full bg-primary text-primary-foreground hover:bg-gold-dark transition-colors duration-300 px-8 py-4 rounded-md font-semibold text-lg"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Iniciar conversa
+            </a>
+
+            {/* CNPJ */}
+            <p className="text-center text-foreground/50 text-sm mt-8">
+              CNPJ: 14.357.629/0001-06
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
