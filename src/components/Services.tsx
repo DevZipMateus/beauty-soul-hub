@@ -2,6 +2,7 @@ import { Sparkles, Droplets, Leaf } from "lucide-react";
 import serviceCosmetics from "@/assets/service-cosmetics.jpg";
 import serviceHair from "@/assets/service-hair.jpg";
 import serviceFacial from "@/assets/service-facial.jpg";
+import bgServices from "@/assets/bg-services.jpg";
 
 const services = [
   {
@@ -32,8 +33,16 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="servicos" className="section-padding bg-secondary">
-      <div className="container-custom">
+    <section id="servicos" className="section-padding relative overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bgServices})` }}
+      >
+        <div className="absolute inset-0 bg-secondary/92" />
+      </div>
+
+      <div className="container-custom relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -51,7 +60,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-background rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              className="group bg-background/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
             >
               {/* Image */}
               <div className="relative h-56 overflow-hidden">
@@ -87,10 +96,10 @@ const Services = () => {
             Marcas que distribuímos
           </p>
           <div className="flex items-center justify-center gap-12 flex-wrap">
-            <div className="bg-background px-10 py-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+            <div className="bg-background/95 backdrop-blur-sm px-10 py-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <span className="font-display text-3xl font-bold text-accent">Salvatore</span>
             </div>
-            <div className="bg-background px-10 py-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+            <div className="bg-background/95 backdrop-blur-sm px-10 py-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <span className="font-display text-3xl font-bold text-accent">Toctus</span>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock, Instagram } from "lucide-react";
+import bgContact from "@/assets/bg-contact.jpg";
 
 const contactInfo = [
   {
@@ -29,8 +30,16 @@ const contactInfo = [
 
 const Contact = () => {
   return (
-    <section id="contato" className="section-padding bg-accent">
-      <div className="container-custom">
+    <section id="contato" className="section-padding relative overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bgContact})` }}
+      >
+        <div className="absolute inset-0 bg-accent/85" />
+      </div>
+
+      <div className="container-custom relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-accent-foreground mb-4">
@@ -49,7 +58,7 @@ const Contact = () => {
             {contactInfo.map((item, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 bg-brown-light/30 rounded-xl p-6 backdrop-blur-sm"
+                className="flex items-start gap-4 bg-brown-light/40 backdrop-blur-sm rounded-xl p-6 border border-gold/20"
               >
                 <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
                   <item.icon className="w-6 h-6 text-gold" />
@@ -75,7 +84,7 @@ const Contact = () => {
             ))}
 
             {/* Social Media */}
-            <div className="flex items-start gap-4 bg-brown-light/30 rounded-xl p-6 backdrop-blur-sm">
+            <div className="flex items-start gap-4 bg-brown-light/40 backdrop-blur-sm rounded-xl p-6 border border-gold/20">
               <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
                 <Instagram className="w-6 h-6 text-gold" />
               </div>
@@ -96,7 +105,7 @@ const Contact = () => {
           </div>
 
           {/* CTA Card */}
-          <div className="bg-background rounded-2xl p-8 md:p-10 shadow-2xl">
+          <div className="bg-background/95 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-2xl">
             <h3 className="font-display text-3xl font-bold text-foreground mb-4">
               Fale conosco pelo WhatsApp
             </h3>
