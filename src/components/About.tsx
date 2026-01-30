@@ -1,4 +1,5 @@
 import { Target, Eye, Heart } from "lucide-react";
+import aboutSalon from "@/assets/about-salon.jpg";
 
 const About = () => {
   return (
@@ -12,19 +13,32 @@ const About = () => {
           <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
         </div>
 
-        {/* History */}
-        <div className="max-w-4xl mx-auto mb-20">
-          <div className="bg-card rounded-2xl p-8 md:p-12 shadow-lg">
-            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed mb-6">
-              A Beauty Soul Cosméticos surgiu em <strong className="text-primary">26 de setembro de 2011</strong>, 
-              quando descobrimos um alinhamento natural com o mercado de beleza profissional. 
-              Ali vimos uma oportunidade de negócios, levando aos profissionais produtos capazes de 
-              transformar vidas de forma segura.
-            </p>
-            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
-              Nosso compromisso é continuar em constante crescimento junto com os profissionais, 
-              elevando seu nível e transformando-os em <strong className="text-primary">profissionais de excelência</strong>.
-            </p>
+        {/* History with Image */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <div className="order-2 lg:order-1">
+            <div className="bg-card rounded-2xl p-8 md:p-10 shadow-lg">
+              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed mb-6">
+                A Beauty Soul Cosméticos surgiu em <strong className="text-primary">26 de setembro de 2011</strong>, 
+                quando descobrimos um alinhamento natural com o mercado de beleza profissional. 
+                Ali vimos uma oportunidade de negócios, levando aos profissionais produtos capazes de 
+                transformar vidas de forma segura.
+              </p>
+              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
+                Nosso compromisso é continuar em constante crescimento junto com os profissionais, 
+                elevando seu nível e transformando-os em <strong className="text-primary">profissionais de excelência</strong>.
+              </p>
+            </div>
+          </div>
+          <div className="order-1 lg:order-2">
+            <div className="relative">
+              <img
+                src={aboutSalon}
+                alt="Salão de beleza profissional com produtos cosméticos"
+                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+              />
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary rounded-2xl -z-10" />
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-secondary rounded-full -z-10" />
+            </div>
           </div>
         </div>
 
