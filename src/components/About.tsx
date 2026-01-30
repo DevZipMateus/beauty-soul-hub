@@ -1,10 +1,22 @@
 import { Target, Eye, Heart } from "lucide-react";
 import aboutSalon from "@/assets/about-salon.jpg";
+import bgAbout from "@/assets/bg-about.jpg";
 
 const About = () => {
   return (
-    <section id="sobre" className="section-padding bg-background">
-      <div className="container-custom">
+    <section 
+      id="sobre" 
+      className="section-padding relative overflow-hidden"
+    >
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bgAbout})` }}
+      >
+        <div className="absolute inset-0 bg-background/90" />
+      </div>
+
+      <div className="container-custom relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -16,7 +28,7 @@ const About = () => {
         {/* History with Image */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <div className="order-2 lg:order-1">
-            <div className="bg-card rounded-2xl p-8 md:p-10 shadow-lg">
+            <div className="bg-card/95 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg">
               <p className="text-lg md:text-xl text-foreground/80 leading-relaxed mb-6">
                 A Beauty Soul Cosméticos surgiu em <strong className="text-primary">26 de setembro de 2011</strong>, 
                 quando descobrimos um alinhamento natural com o mercado de beleza profissional. 
@@ -46,7 +58,7 @@ const About = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Vision */}
           <div className="group">
-            <div className="bg-card rounded-2xl p-8 h-full shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-primary">
+            <div className="bg-card/95 backdrop-blur-sm rounded-2xl p-8 h-full shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-primary">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                 <Eye className="w-8 h-8 text-primary" />
               </div>
@@ -60,7 +72,7 @@ const About = () => {
 
           {/* Mission */}
           <div className="group">
-            <div className="bg-card rounded-2xl p-8 h-full shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-primary">
+            <div className="bg-card/95 backdrop-blur-sm rounded-2xl p-8 h-full shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-primary">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                 <Target className="w-8 h-8 text-primary" />
               </div>
@@ -75,7 +87,7 @@ const About = () => {
 
           {/* Values */}
           <div className="group">
-            <div className="bg-card rounded-2xl p-8 h-full shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-primary">
+            <div className="bg-card/95 backdrop-blur-sm rounded-2xl p-8 h-full shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-primary">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                 <Heart className="w-8 h-8 text-primary" />
               </div>
