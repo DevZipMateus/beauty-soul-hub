@@ -1,5 +1,6 @@
 import { motion, type Easing } from "framer-motion";
-import { Sparkles, Droplets, Leaf } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Sparkles, Droplets, Leaf, ShoppingBag, ArrowRight } from "lucide-react";
 import serviceCosmetics from "@/assets/service-cosmetics.jpg";
 import serviceHair from "@/assets/service-hair.jpg";
 import serviceFacial from "@/assets/service-facial.jpg";
@@ -143,6 +144,54 @@ const Services = () => {
               </motion.div>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* Vitrine Section */}
+        <motion.div
+          className="mt-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.div
+            className="bg-gradient-to-r from-accent via-brown-light to-accent rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+          >
+            {/* Decorative elements */}
+            <div className="absolute top-0 left-0 w-32 h-32 bg-gold/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
+            <div className="absolute bottom-0 right-0 w-40 h-40 bg-gold/10 rounded-full translate-x-1/2 translate-y-1/2" />
+            
+            <div className="relative z-10">
+              <motion.div
+                className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6"
+                animate={{ rotate: [0, 5, -5, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <ShoppingBag className="w-10 h-10 text-primary-foreground" />
+              </motion.div>
+              
+              <h3 className="font-display text-3xl md:text-4xl font-bold text-accent-foreground mb-4">
+                Conheça Nossa Vitrine
+              </h3>
+              <p className="text-accent-foreground/80 text-lg max-w-2xl mx-auto mb-8">
+                Explore nossa seleção completa de produtos profissionais. Encontre tudo o que você precisa 
+                para seu salão ou atendimento com qualidade garantida.
+              </p>
+              
+              <Link to="/vitrine">
+                <motion.div
+                  className="inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground hover:bg-gold-dark transition-colors duration-300 px-10 py-4 rounded-full font-semibold text-lg shadow-lg"
+                  whileHover={{ scale: 1.05, x: 5 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Acessar Vitrine
+                  <ArrowRight className="w-5 h-5" />
+                </motion.div>
+              </Link>
+            </div>
+          </motion.div>
         </motion.div>
 
         {/* Brands Section */}
