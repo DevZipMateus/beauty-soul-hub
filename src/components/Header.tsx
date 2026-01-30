@@ -34,7 +34,7 @@ const Header = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <nav className="container-custom flex items-center justify-between py-4 px-4 md:px-8">
+      <nav className="container-custom flex items-center justify-between py-3 sm:py-4 px-4 sm:px-6 md:px-8">
         <motion.a
           href="#inicio"
           className="flex items-center"
@@ -44,12 +44,12 @@ const Header = () => {
           <img
             src={logo}
             alt="Beauty Sul Cosméticos - Logo"
-            className="h-12 md:h-16 w-auto"
+            className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto"
           />
         </motion.a>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-4 xl:gap-8">
           {navItems.map((item, index) => (
             <motion.li
               key={item.href}
@@ -59,7 +59,7 @@ const Header = () => {
             >
               <motion.a
                 href={item.href}
-                className={`font-medium text-sm uppercase tracking-wide transition-colors duration-300 hover:text-primary relative ${
+                className={`font-medium text-xs xl:text-sm uppercase tracking-wide transition-colors duration-300 hover:text-primary relative ${
                   isScrolled ? "text-foreground" : "text-foreground"
                 }`}
                 whileHover={{ y: -2 }}
@@ -77,13 +77,13 @@ const Header = () => {
           <motion.li
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.4 }}
+            transition={{ duration: 0.4, delay: 0.5 }}
           >
             <motion.a
               href="https://wa.me/5551981636522"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary text-sm uppercase tracking-wide"
+              className="btn-primary text-xs xl:text-sm uppercase tracking-wide"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -95,7 +95,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <motion.button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-foreground"
+          className="lg:hidden p-2 text-foreground"
           aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
           whileTap={{ scale: 0.9 }}
         >
@@ -106,7 +106,7 @@ const Header = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="absolute top-full left-0 right-0 bg-background shadow-lg md:hidden overflow-hidden"
+              className="absolute top-full left-0 right-0 bg-background shadow-lg lg:hidden overflow-hidden"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
