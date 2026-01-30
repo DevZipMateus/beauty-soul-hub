@@ -13,19 +13,24 @@ const navItems = [
 ];
 
 const HEADER_HEIGHT = 80;
-const BADGE_HEIGHT = 63;
 
 const Vitrine = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [iframeHeight, setIframeHeight] = useState(
-    window.innerHeight - HEADER_HEIGHT - BADGE_HEIGHT
+    window.innerHeight - HEADER_HEIGHT
   );
 
   useEffect(() => {
     document.title = "Demonstração de Vitrine | Beauty Sul Cosméticos";
 
+    // Hide MonteSite badge on this page
+    const badge = document.getElementById("montesite-footer-badge");
+    if (badge) {
+      badge.style.display = "none";
+    }
+
     const handleResize = () => {
-      setIframeHeight(window.innerHeight - HEADER_HEIGHT - BADGE_HEIGHT);
+      setIframeHeight(window.innerHeight - HEADER_HEIGHT);
     };
 
     window.addEventListener("resize", handleResize);
@@ -36,6 +41,10 @@ const Vitrine = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
       document.body.style.overflow = "";
+      // Restore badge when leaving this page
+      if (badge) {
+        badge.style.display = "";
+      }
     };
   }, []);
 
