@@ -43,7 +43,7 @@ const Header = () => {
         >
           <img
             src={logo}
-            alt="Beauty Soul Cosméticos - Logo"
+            alt="Beauty Sul Cosméticos - Logo"
             className="h-12 md:h-16 w-auto"
           />
         </motion.a>

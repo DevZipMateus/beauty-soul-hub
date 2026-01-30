@@ -53,7 +53,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Beauty Soul Cosméticos
+            Beauty Sul Cosméticos
           </motion.h1>
           <motion.h2
             className="text-xl md:text-2xl text-beige/90 mb-8 leading-relaxed"

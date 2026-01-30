@@ -22,7 +22,7 @@ const Vitrine = () => {
   );
 
   useEffect(() => {
-    document.title = "Demonstração de Vitrine | Beauty Soul Cosméticos";
+    document.title = "Demonstração de Vitrine | Beauty Sul Cosméticos";
 
     const handleResize = () => {
       setIframeHeight(window.innerHeight - HEADER_HEIGHT - BADGE_HEIGHT);
@@ -58,7 +58,7 @@ const Vitrine = () => {
           >
             <img
               src={logo}
-              alt="Beauty Soul Cosméticos - Logo"
+              alt="Beauty Sul Cosméticos - Logo"
               className="h-12 md:h-14 w-auto"
             />
           </motion.a>
